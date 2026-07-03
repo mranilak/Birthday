@@ -1,0 +1,278 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+/* The font is loaded by each HTML page for best performance. */
+
+
+/* ==========================================
+   CSS VARIABLES
+========================================== */
+
+:root {
+
+    /* Colors */
+    --bg-dark: #050816;
+    --bg-light: #101B3A;
+
+    --primary: #FF4D8D;
+    --secondary: #7A5CFF;
+
+    --gold: #FFD54F;
+
+    --white: #FFFFFF;
+
+    --text: #F5F5F5;
+
+    --glass: rgba(255, 255, 255, 0.12);
+
+    --border: rgba(255, 255, 255, 0.25);
+
+    --shadow: 0 8px 35px rgba(0, 0, 0, .35);
+
+    --radius: 22px;
+
+    --transition: .35s ease;
+
+}
+
+
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/* ==========================================
+   HTML
+========================================== */
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+/* ==========================================
+   BODY
+========================================== */
+
+body {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    font-family: 'Poppins', sans-serif;
+
+    background: var(--bg-dark);
+
+    color: var(--white);
+
+    position: relative;
+
+}
+
+
+/* ==========================================
+   LINKS
+========================================== */
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+/* ==========================================
+   IMAGES
+========================================== */
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+button {
+
+    border: none;
+
+    outline: none;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+}
+
+
+/* ==========================================
+   LIST
+========================================== */
+
+ul {
+
+    list-style: none;
+
+}
+
+
+/* ==========================================
+   COMMON CONTAINER
+========================================== */
+
+.container {
+
+    width: min(92%, 1200px);
+
+    margin: auto;
+
+}
+
+
+/* ==========================================
+   FULL SCREEN SECTION
+========================================== */
+
+section {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    position: relative;
+
+}
+
+
+/* ==========================================
+   FLEX UTILITIES
+========================================== */
+
+.flex {
+
+    display: flex;
+
+}
+
+.flex-center {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.column {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* ==========================================
+   TEXT ALIGNMENT
+========================================== */
+
+.text-center {
+
+    text-align: center;
+
+}
+
+
+/* ==========================================
+   HIDDEN
+========================================== */
+
+.hidden {
+
+    display: none;
+
+}
+
+
+/* ==========================================
+   GLASS EFFECT
+========================================== */
+
+.glass {
+
+    background: var(--glass);
+
+    backdrop-filter: blur(14px);
+
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #111;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--primary);
+
+    border-radius: 20px;
+
+}
+
+
+/* ==========================================
+   SELECTION
+========================================== */
+
+::selection {
+
+    background: var(--primary);
+
+    color: #fff;
+
+}

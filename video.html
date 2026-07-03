@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Beautiful Memories ❤️</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%23ff4d8d'/%3E%3C/svg%3E">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/video.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="video-background"></div>
+
+    <!-- Intro Text -->
+    <div id="introScreen" class="intro-screen">
+
+        <h1>✨ Our Beautiful Memories ✨</h1>
+
+        <p>
+            Every picture...<br>
+            Every smile...<br>
+            Every moment...<br>
+            Means the world to me ❤️
+        </p>
+
+    </div>
+
+    <!-- Video Section -->
+    <main class="video-section">
+        <button id="skipBtn" class="skip-btn">
+            Skip ▶
+        </button>
+        <!-- Blurred Background Video -->
+        <video class="video-blur" autoplay muted loop playsinline>
+
+            <source src="assets/videos/birthday-video.mp4" type="video/mp4">
+
+        </video>
+
+        <!-- Main Video -->
+        <video id="memoryVideo" class="memory-video" playsinline preload="auto">
+
+            <source src="assets/videos/birthday-video.mp4" type="video/mp4">
+
+        </video>
+
+    </main>
+
+    <!-- Fade Screen -->
+    <div id="fadeScreen" class="fade-screen"></div>
+
+    <!-- Cinematic Overlay -->
+    <div class="video-overlay"></div>
+
+    <!-- JavaScript -->
+    <script src="js/viewport.js"></script>
+    <script src="js/video.js"></script>
+
+</body>
+
+</html>

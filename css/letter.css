@@ -1,0 +1,630 @@
+/*=========================================
+        LETTER BACKGROUND
+=========================================*/
+
+body {
+
+    margin: 0;
+
+    overflow-x: hidden;
+
+    font-family: 'Poppins', sans-serif;
+
+    background: #050816;
+
+}
+
+.letter-background {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        radial-gradient(circle at top,
+            #2c2069 0%,
+            #101633 45%,
+            #050816 100%);
+
+    z-index: -2;
+
+}
+
+/*=========================================
+        LETTER SECTION
+=========================================*/
+
+.letter-section {
+
+    width: 100vw;
+
+    height: calc(var(--vh, 1vh) * 100);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+/*=========================================
+            ENVELOPE
+=========================================*/
+
+.envelope {
+
+    position: relative;
+
+    width: 340px;
+
+    height: 220px;
+
+    cursor: pointer;
+
+    animation: floatEnvelope 3s ease-in-out infinite;
+
+}
+
+/* Main Body */
+
+.envelope-body {
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 150px;
+
+    background: #f8ead7;
+
+    border-radius: 0 0 12px 12px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, .4);
+
+}
+
+/* Envelope Flap */
+
+.envelope-top {
+
+    position: absolute;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 120px;
+
+    background: #edd8be;
+
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+
+    transform-origin: top;
+
+}
+
+/*=========================================
+        OPEN ENVELOPE
+=========================================*/
+
+.envelope.open .envelope-top {
+
+    transform: rotateX(180deg);
+
+    transition: 1s;
+
+}
+
+.envelope-top {
+
+    transition: 1s;
+
+}
+
+/* Heart Seal */
+
+.heart-seal {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 105px;
+
+    transform: translateX(-50%);
+
+    font-size: 38px;
+
+    animation: heartBeat 1.5s infinite;
+
+    transition: .8s;
+
+}
+
+.envelope.open .heart-seal {
+
+    opacity: 0;
+
+    transform: translateX(-50%) scale(0);
+
+}
+
+/*=========================================
+            LETTER PAPER
+=========================================*/
+
+.letter-paper {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 60px;
+
+    transform: translateX(-50%);
+
+    width: 300px;
+
+    height: 360px;
+
+    background: #fffdf8;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, .35);
+
+    overflow: hidden;
+
+    z-index: -1;
+
+    transition: 1.6s;
+
+}
+
+/* Slide Out */
+
+.envelope.open .letter-paper {
+
+    bottom: 170px;
+
+}
+
+.paper-content {
+
+    padding: 30px;
+
+    text-align: center;
+
+}
+
+.paper-content h1 {
+
+    color: #ff4d8d;
+
+    margin-bottom: 25px;
+
+}
+
+.paper-content p {
+
+    color: #444;
+
+    line-height: 1.8;
+
+    font-size: 18px;
+
+}
+
+/*=========================================
+        FULL LETTER
+=========================================*/
+
+.full-letter {
+
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(.8);
+
+    width: 700px;
+
+    max-width: 90%;
+
+    min-height: 500px;
+
+    background: #fffdf8;
+
+    border-radius: 20px;
+
+    padding: 50px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .4);
+
+    text-align: center;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 1s;
+
+    z-index: 100;
+
+}
+
+.full-letter.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translate(-50%, -50%) scale(1);
+
+}
+
+.full-letter h1 {
+
+    color: #ff4d8d;
+
+    margin-bottom: 30px;
+
+}
+
+.full-letter p {
+
+    color: #444;
+
+    line-height: 2;
+
+    font-size: 22px;
+
+}
+
+/*=========================================
+        MEMORY PHOTOS
+=========================================*/
+
+.memory-photo {
+
+    position: fixed;
+
+    width: 160px;
+
+    height: 200px;
+
+    object-fit: cover;
+
+    border: 8px solid white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .35);
+
+    opacity: 0;
+
+    transform: scale(.8);
+
+    transition: 1s;
+
+    z-index: 220; /* bring photos above the letter card */
+    pointer-events: none;
+
+}
+
+.memory-photo.show {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+}
+
+/* Positions */
+
+.photo1 {
+
+    top: 8%;
+
+    left: 5%;
+
+    transform: rotate(-12deg);
+
+}
+
+.photo2 {
+
+    top: 12%;
+
+    right: 5%;
+
+    transform: rotate(10deg);
+
+}
+
+.photo3 {
+
+    bottom: 10%;
+
+    left: 8%;
+
+    transform: rotate(8deg);
+
+}
+
+.photo4 {
+
+    bottom: 8%;
+
+    right: 8%;
+
+    transform: rotate(-10deg);
+
+}
+
+/*=========================================
+            FINAL SIGNATURE
+=========================================*/
+
+.signature {
+
+    margin-top: 40px;
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition: 1.5s;
+
+    text-align: center;
+
+}
+
+.signature.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+.signature h2 {
+
+    color: #ff4d8d;
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+
+}
+
+.signature h3 {
+
+    color: #444;
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+
+}
+
+.signature p {
+
+    color: #b8860b;
+
+    font-size: 20px;
+
+    letter-spacing: 2px;
+
+}
+
+/*=========================================
+        MAGICAL PARTICLES
+=========================================*/
+
+.sparkle {
+
+    position: fixed;
+
+    border-radius: 50%;
+
+    background: radial-gradient(circle,
+            #fff9c4,
+            gold,
+            transparent);
+
+    box-shadow:
+        0 0 8px gold,
+        0 0 18px gold,
+        0 0 28px orange;
+
+    pointer-events: none;
+
+    animation: magicFloat linear forwards;
+
+    z-index: 999;
+
+}
+
+/*=========================================
+        REPLAY BUTTON
+=========================================*/
+
+.replay-btn {
+
+    margin-top: 40px;
+
+    padding: 16px 38px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: linear-gradient(45deg, #ff4d8d, #ff80ab);
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    pointer-events: none;
+
+    transition: 0.8s;
+
+    box-shadow:
+        0 0 20px rgba(255, 77, 141, .4);
+
+}
+
+.replay-btn.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+
+}
+
+.replay-btn:hover {
+
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 35px rgba(255, 77, 141, .8);
+
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.full-letter p {
+    text-align: left;
+}
+
+/* ==========================================
+   LETTER PAGE RESPONSIVE
+========================================== */
+
+@media (max-width: 1024px) {
+    .letter-section {
+        align-items: flex-start;
+        padding-top: 60px;
+        min-height: calc(var(--vh, 1vh) * 100);
+        padding-bottom: 80px;
+    }
+
+    .full-letter {
+        width: min(88%, 520px);
+        padding: 35px;
+        max-height: calc(calc(var(--vh, 1vh) * 100) - 90px);
+        overflow-y: auto;
+        min-height: auto;
+    }
+
+    .full-letter p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .memory-photo {
+        width: 130px;
+        height: 170px;
+        border-width: 6px;
+    }
+
+    .photo1 {
+        top: 6%;
+        left: 4%;
+        transform: rotate(-10deg);
+    }
+
+    .photo2 {
+        top: 10%;
+        right: 4%;
+        transform: rotate(8deg);
+    }
+
+    .photo3 {
+        bottom: 12%;
+        left: 6%;
+        transform: rotate(6deg);
+    }
+
+    .photo4 {
+        bottom: 10%;
+        right: 6%;
+        transform: rotate(-8deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .letter-section {
+        padding-top: 40px;
+        min-height: calc(var(--vh, 1vh) * 100);
+        padding-bottom: 80px;
+    }
+
+    .full-letter {
+        width: min(92%, 420px);
+        padding: 24px;
+        max-height: calc(calc(var(--vh, 1vh) * 100) - 70px);
+        overflow-y: auto;
+    }
+
+    .full-letter h1 {
+        font-size: 2rem;
+    }
+
+    .full-letter p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .memory-photo {
+        width: 110px;
+        height: 140px;
+        border-width: 5px;
+    }
+
+    .photo1 {
+        top: 4%;
+        left: 3%;
+    }
+
+    .photo2 {
+        top: 7%;
+        right: 3%;
+    }
+
+    .photo3 {
+        bottom: 10%;
+        left: 5%;
+    }
+
+    .photo4 {
+        bottom: 8%;
+        right: 5%;
+    }
+
+    .replay-btn {
+        width: 100%;
+        max-width: 260px;
+    }
+}

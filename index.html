@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Surprise ❤️</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%23ff4d8d'/%3E%3C/svg%3E">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ========================================= -->
+    <!-- Background Layer -->
+    <!-- ========================================= -->
+
+    <div class="background"></div>
+
+    <!-- Background Glow -->
+    <div class="background-glow"></div>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow"></div>
+
+    <!-- Moon -->
+    <div class="moon"></div>
+
+    <!-- ========================================= -->
+    <!-- Animated Effects -->
+    <!-- ========================================= -->
+
+    <div id="stars"></div>
+
+    <div id="balloons"></div>
+
+    <div id="hearts"></div>
+
+    <div id="sparkles"></div>
+
+    <div id="photos"></div>
+
+    <!-- ========================================= -->
+    <!-- Main Content -->
+    <!-- ========================================= -->
+
+    <main class="hero">
+
+        <div class="glass-card">
+
+            <span class="tag">
+                ✨ Birthday Surprise ✨
+            </span>
+
+            <h1>
+                For Someone <br>
+                Very Special ❤️
+            </h1>
+
+            <p>
+                Every memory tells a beautiful story...
+                <br>
+                Click below to begin your surprise.
+            </p>
+
+            <button id="startBtn">
+                🎁 Open Surprise
+            </button>
+
+        </div>
+
+    </main>
+
+    <!-- ========================================= -->
+    <!-- Music (starts after button click) -->
+    <!-- ========================================= -->
+
+    <audio id="bgMusic" loop preload="auto">
+        <source src="assets/music/background.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+
+    <!-- ========================================= -->
+    <!-- JavaScript -->
+    <!-- ========================================= -->
+
+    <script src="js/viewport.js"></script>
+    <script src="js/effects/stars.js"></script>
+    <script src="js/effects/balloons.js"></script>
+    <script src="js/effects/hearts.js"></script>
+    <script src="js/effects/photos.js"></script>
+    <script src="js/effects/sparkles.js"></script>
+
+    <script src="js/landing.js"></script>
+
+    <div class="page-transition"></div>
+
+</body>
+
+</html>

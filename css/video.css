@@ -1,0 +1,309 @@
+/*=========================================
+            VIDEO PAGE
+=========================================*/
+
+body {
+
+    margin: 0;
+
+    overflow: hidden;
+
+    background: #000;
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/*=========================================
+            BACKGROUND
+=========================================*/
+
+.video-background {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        radial-gradient(circle at top,
+            #1a1a3d 0%,
+            #0a0a18 45%,
+            #000000 100%);
+
+    z-index: -2;
+
+}
+
+/*=========================================
+            VIDEO SECTION
+=========================================*/
+
+.video-section {
+
+    position: relative;
+
+    width: 100vw;
+
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+}
+
+/*=========================================
+        BLURRED VIDEO BACKGROUND
+=========================================*/
+
+.video-blur {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: blur(35px);
+
+    transform: scale(1.2);
+
+    opacity: .25;
+
+    z-index: -1;
+
+}
+
+/*=========================================
+            MEMORY VIDEO
+=========================================*/
+
+.memory-video {
+
+    height: 90vh;
+
+    width: auto;
+
+    max-width: 95vw;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+
+    background: #000;
+
+    box-shadow:
+        0 0 40px rgba(255, 215, 0, .35);
+
+    opacity: 0;
+
+    transform: scale(.95);
+
+    transition: 1.2s ease;
+
+}
+
+/*=========================================
+            INTRO SCREEN
+=========================================*/
+
+.intro-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background: #000;
+
+    z-index: 100;
+
+    transition: 1.2s;
+
+}
+
+.intro-screen.hide {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+}
+
+.intro-screen h1 {
+
+    color: #FFD700;
+
+    font-size: 3rem;
+
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 0 15px gold,
+        0 0 35px orange;
+
+}
+
+.intro-screen p {
+
+    color: white;
+
+    font-size: 1.3rem;
+
+    line-height: 1.8;
+
+}
+
+/*=========================================
+            VIDEO SHOW
+=========================================*/
+
+.memory-video.show {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+}
+
+/*=========================================
+            FADE SCREEN
+=========================================*/
+
+.fade-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: #000;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 1s;
+
+    z-index: 500;
+
+}
+
+.fade-screen.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+/*=========================================
+        MOBILE RESPONSIVE
+=========================================*/
+
+@media (max-width:768px) {
+
+    .memory-video {
+
+        height: 85vh;
+
+        max-width: 100%;
+
+        border-radius: 15px;
+
+    }
+
+    .intro-screen h1 {
+
+        font-size: 2rem;
+
+    }
+
+    .intro-screen p {
+
+        font-size: 1rem;
+
+        padding: 0 20px;
+
+    }
+
+}
+
+/*=========================================
+        CINEMATIC OVERLAY
+=========================================*/
+
+.video-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle,
+            rgba(0, 0, 0, 0) 45%,
+            rgba(0, 0, 0, .55) 100%);
+
+    z-index: 2;
+
+}
+
+/*=========================================
+            SKIP BUTTON
+=========================================*/
+
+.skip-btn {
+
+    position: fixed;
+
+    top: 25px;
+
+    right: 25px;
+
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, .15);
+
+    backdrop-filter: blur(10px);
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    z-index: 50;
+
+    transition: .3s;
+
+}
+
+.skip-btn:hover {
+
+    background: rgba(255, 255, 255, .3);
+
+    transform: scale(1.05);
+
+}

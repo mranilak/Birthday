@@ -1,0 +1,184 @@
+/* ==========================================
+   Large Desktop (1440px+)
+========================================== */
+@media (min-width: 1440px) {
+
+    .glass-card {
+        max-width: 700px;
+        padding: 60px;
+    }
+
+    .moon {
+        width: 140px;
+        height: 140px;
+    }
+
+    .photo {
+        width: 200px;
+    }
+}
+
+
+/* ==========================================
+   Laptop (1024px - 1439px)
+========================================== */
+@media (max-width: 1439px) {
+
+    .glass-card {
+        width: min(90%, 650px);
+    }
+
+}
+
+
+/* ==========================================
+   Tablet (768px - 1023px)
+========================================== */
+@media (max-width:1023px) {
+
+    .moon {
+
+        width: 90px;
+        height: 90px;
+
+        right: 40px;
+        top: 40px;
+
+    }
+
+    .glass-card {
+
+        padding: 40px 30px;
+
+    }
+
+    .glass-card h1 {
+
+        font-size: 3rem;
+
+    }
+
+    .glass-card p {
+
+        font-size: 1rem;
+
+    }
+
+    #startBtn {
+
+        width: 100%;
+
+        max-width: 300px;
+
+    }
+
+}
+
+
+/* ==========================================
+   Mobile (767px and below)
+========================================== */
+@media (max-width:767px) {
+
+    body {
+
+        overflow: hidden;
+
+    }
+
+    .moon {
+
+        width: 70px;
+        height: 70px;
+
+        right: 20px;
+        top: 20px;
+
+    }
+
+    .background-glow {
+
+        width: 300px;
+        height: 300px;
+
+        filter: blur(100px);
+
+    }
+
+    .glass-card {
+
+        width: 95%;
+
+        padding: 30px 20px;
+
+        border-radius: 22px;
+
+    }
+
+    .tag {
+
+        font-size: .75rem;
+
+        padding: 6px 14px;
+
+    }
+
+    .glass-card h1 {
+
+        font-size: 2.2rem;
+
+        line-height: 1.3;
+
+    }
+
+    .glass-card p {
+
+        font-size: .95rem;
+
+        margin-bottom: 30px;
+
+    }
+
+    #startBtn {
+
+        width: 100%;
+
+        font-size: 1rem;
+
+        padding: 16px;
+
+    }
+
+    .photo {
+
+        width: 100px;
+
+    }
+
+}
+
+
+/* ==========================================
+   Small Mobile (400px and below)
+========================================== */
+@media (max-width:400px) {
+
+    .glass-card h1 {
+
+        font-size: 1.9rem;
+
+    }
+
+    .glass-card p {
+
+        font-size: .85rem;
+
+    }
+
+    #startBtn {
+
+        font-size: .95rem;
+
+    }
+
+}

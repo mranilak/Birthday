@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Cake 🎂</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%23ff4d8d'/%3E%3C/svg%3E">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/cake.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <audio id="birthdaySong" preload="auto">
+        <source src="assets/music/birthday-song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Background -->
+    <div class="cake-background"></div>
+
+    <!-- Stars -->
+    <div id="stars"></div>
+
+    <!-- Hearts -->
+    <div id="hearts"></div>
+
+    <!-- Confetti -->
+    <div id="confetti"></div>
+
+    <!-- Fireworks -->
+    <div id="fireworks"></div>
+
+    <!-- Main Cake Section -->
+    <main class="cake-section">
+
+        <div class="cake-container">
+
+            <!-- Plate -->
+            <div class="cake-plate"></div>
+
+            <!-- Cake -->
+            <div class="cake">
+
+                <!-- Top Layer -->
+                <div class="layer top">
+
+                    <div class="cream cream-top"></div>
+
+                    <!-- Candles -->
+                    <div class="candles">
+
+                        <div class="candle candle1">
+                            <div class="flame"></div>
+                            <div class="smoke"></div>
+                        </div>
+
+                        <div class="candle candle2">
+                            <div class="flame"></div>
+                            <div class="smoke"></div>
+                        </div>
+
+                        <div class="candle candle3">
+                            <div class="flame"></div>
+                            <div class="smoke"></div>
+                        </div>
+
+                        <div class="candle candle4">
+                            <div class="flame"></div>
+                            <div class="smoke"></div>
+                        </div>
+
+                        <div class="candle candle5">
+                            <div class="flame"></div>
+                            <div class="smoke"></div>
+                        </div>
+
+                    </div>
+
+                    <!-- Decorations -->
+                    <div class="decorations">
+
+                        <div class="cherry c1"></div>
+                        <div class="cherry c2"></div>
+                        <div class="cherry c3"></div>
+
+                        <div class="star s1">★</div>
+                        <div class="star s2">★</div>
+
+                        <div class="pearl p1"></div>
+                        <div class="pearl p2"></div>
+                        <div class="pearl p3"></div>
+
+                    </div>
+
+                </div>
+
+                <!-- Middle Layer -->
+                <div class="layer middle">
+                    <div class="cream cream-middle"></div>
+                </div>
+
+                <!-- Bottom Layer -->
+                <div class="layer bottom">
+                    <div class="cream cream-bottom"></div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Birthday Message -->
+        <div id="birthdayMessage" class="birthday-message">
+
+            <h1>🎉 Happy Birthday! 🎉</h1>
+
+            <p>
+                Wishing you endless happiness,<br>
+                lots of success,<br>
+                and unforgettable memories.
+            </p>
+
+            <h2>❤️ Have a Wonderful Day ❤️</h2>
+
+            <button id="continueBtn" class="continue-btn">
+                🎁 Continue to Your Surprise
+            </button>
+
+        </div>
+
+    </main>
+    <!-- Transition Screen -->
+    <div id="transitionScreen" class="transition-screen">
+
+        <h1>✨ One Last Surprise Awaits... ✨</h1>
+
+    </div>
+    <script src="js/viewport.js"></script>
+    <script src="js/effects/stars.js"></script>
+
+    <script src="js/effects/fireworks.js"></script>
+    <script src="js/effects/confetti.js"></script>
+    <script src="js/effects/hearts.js"></script>
+    <script src="js/effects/music.js"></script>
+    <script src="js/effects/message.js"></script>
+
+    <script src="js/cake.js"></script>
+
+</body>
+
+</html>
